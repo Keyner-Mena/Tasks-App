@@ -43,6 +43,8 @@ $(document).ready(function () {
       fetchTasks();
       $("#task-form").trigger("reset");
     });
+
+    edit = false;
   });
 
   function fetchTasks() {

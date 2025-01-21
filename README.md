@@ -25,5 +25,5 @@ Este proyecto esta elaborado con JQuery, Bootstrap, PHP, phpMyAdmin y HTML
 La interfaz que se deberia mostrar es:
 ![alt text](image.png)
 
-> [!NOTE] Nota
+> [!NOTE]
 > Para actualizar algún dato se debe hacer click en el nombre de la tarea deseada.
