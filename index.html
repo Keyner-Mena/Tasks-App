@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Keyner Mena</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+      <a href="#" class="navbar-brand"> Tasks App </a>
+      <ul class="navbar-nav ms-auto">
+        <form action="" class="form-inline my-2 my-lg-0 d-flex">
+          <input
+            type="search"
+            name=""
+            id="search"
+            class="form-control me-sm-2"
+            placeholder="Search your task"
+          />
+          <button class="btn btn-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </ul>
+    </nav>
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <form action="" id="task-form">
+                <input type="hidden" id="taskId" />
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    name=""
+                    id="name"
+                    placeholder="Task Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <textarea
+                    name=""
+                    id="description"
+                    cols="30"
+                    rows="10"
+                    class="form-control"
+                    placeholder="Task Description"
+                  ></textarea>
+                </div>
+                <div class="d-grid">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block text-center"
+                  >
+                    Save Task
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="card my-4" id="task-result">
+            <div class="card-body">
+              <ul id="container"></ul>
+            </div>
+          </div>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Task Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody id="tasks"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- JS Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS Propio -->
+    <script src="app.js"></script>
+  </body>
+</html>
