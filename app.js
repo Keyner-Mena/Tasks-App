@@ -4,6 +4,7 @@ $(document).ready(function () {
   $("#task-result").hide();
   fetchTasks();
 
+  //Funcionalidad Barra de búsqueda
   $("#search").keyup(function (e) {
     if ($("#search").val()) {
       let search = $("#search").val();
@@ -16,6 +17,7 @@ $(document).ready(function () {
           //console.log(response);
           let tasks = JSON.parse(response);
           //console.log(tasks);
+          // Mostrar todos los resultados
           let template = "";
           tasks.forEach((task) => {
             template += `<li>
@@ -29,6 +31,7 @@ $(document).ready(function () {
     }
   });
 
+  // Crear Tarea / Editar Tarea
   $("#task-form").submit(function (e) {
     e.preventDefault();
     const postData = {
@@ -47,6 +50,7 @@ $(document).ready(function () {
     edit = false;
   });
 
+  // Mostrar todas las tareas al cargar la página
   function fetchTasks() {
     $.ajax({
       url: "task-list.php",
@@ -75,6 +79,7 @@ $(document).ready(function () {
     });
   }
 
+  // Eliminar Tarea
   $(document).on("click", ".task-delete", function () {
     if (confirm("Are you sure you want to delete it?")) {
       let element = $(this)[0].parentElement.parentElement;
@@ -85,6 +90,7 @@ $(document).ready(function () {
     }
   });
 
+  // Editar Tarea
   $(document).on("click", ".task-item", function () {
     let element = $(this)[0].parentElement.parentElement;
     let id = $(element).attr("taskId");
